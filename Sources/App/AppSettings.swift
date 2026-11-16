@@ -102,9 +102,29 @@ final class AppSettings {
         persist()
     }
 
+    // MARK: - Academy
+
+    func record(for drill: DrillID) -> DrillRecord {
+        saved.academy[drill.rawValue] ?? DrillRecord()
+    }
+
+    func recordDrill(_ run: DrillRun) {
+        guard run.isFinished else { return }
+        var record = record(for: run.drill)
+        record.absorb(run)
+        saved.academy[run.drill.rawValue] = record
+        persist()
+    }
+
+    /// Stars earned across the whole Academy, out of three per drill.
+    var academyStars: Int {
+        DrillID.allCases.reduce(0) { $0 + record(for: $1).stars }
+    }
+
     func clearRecords() {
         saved.highScores.removeAll()
         saved.lifetime = LifetimeStats()
+        saved.academy.removeAll()
         persist()
     }
 

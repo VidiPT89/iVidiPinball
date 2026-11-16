@@ -63,7 +63,7 @@ struct ControlOverlay: View {
 
 /// One half of the screen. Holding presses the flipper; a short horizontal
 /// flick inside the same touch nudges the table instead of pressing again.
-private struct FlipperZone: View {
+struct FlipperZone: View {
 
     let label: String
     let onPress: () -> Void

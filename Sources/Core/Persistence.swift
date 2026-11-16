@@ -68,6 +68,8 @@ struct SavedData: Codable, Equatable {
     var settings = GameSettings()
     var highScores: [HighScore] = []
     var lifetime = LifetimeStats()
+    /// Flipper Academy progress, keyed by `DrillID.rawValue`.
+    var academy: [String: DrillRecord] = [:]
 
     static let highScoreCount = 10
 
@@ -127,6 +129,7 @@ extension SavedData {
         settings = try c.decodeIfPresent(GameSettings.self, forKey: .settings) ?? GameSettings()
         highScores = try c.decodeIfPresent([HighScore].self, forKey: .highScores) ?? []
         lifetime = try c.decodeIfPresent(LifetimeStats.self, forKey: .lifetime) ?? LifetimeStats()
+        academy = (try? c.decodeIfPresent([String: DrillRecord].self, forKey: .academy)) ?? [:]
     }
 }
 

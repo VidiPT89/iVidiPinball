@@ -7,6 +7,11 @@ final class PinballScene: SKScene {
     // MARK: Injected
 
     weak var model: GameModel?
+    /// Set for a Flipper Academy drill instead of a game. The table is the
+    /// same; the rules engine is bypassed and `DrillJudge` referees instead.
+    weak var drillModel: DrillModel?
+    var drillJudge: DrillJudge?
+    var isDrill: Bool { drillModel != nil }
     var audio: AudioEngine?
     var haptics: HapticsEngine?
     var palette: Palette = .dark
@@ -38,7 +43,7 @@ final class PinballScene: SKScene {
     /// Bumped on every new game, so a delayed action queued by the last one —
     /// serving a ball, ending the game after the bonus count — cannot land
     /// in the next.
-    private(set) var gameGeneration = 0
+    var gameGeneration = 0
     /// Extra wait before the next ball while the display counts the bonus.
     var bonusCountdown: TimeInterval = 0
 
@@ -107,6 +112,8 @@ final class PinballScene: SKScene {
         if startWhenReady {
             startWhenReady = false
             startGame()
+        } else if isDrill, session.phase == .playing {
+            feedDrillBall()
         } else if session.phase != .idle && session.phase != .gameOver {
             restoreBalls()
         }
@@ -171,6 +178,10 @@ final class PinballScene: SKScene {
             startWhenReady = true
             return
         }
+        if isDrill {
+            startDrill()
+            return
+        }
         removeAllActions()
         physicsWorld.speed = 1
         releaseAllFlippers()
@@ -194,7 +205,7 @@ final class PinballScene: SKScene {
         }]))
     }
 
-    private func resetTableElements() {
+    func resetTableElements() {
         parts.dropTargets.forEach {
             $0.removeAllActions()
             if session.dropTargetsDown.contains($0.index) {
@@ -264,6 +275,10 @@ final class PinballScene: SKScene {
             flipper.press()
         }
         for effect in session.rotateLanes(towards: side) { handle(effect) }
+        if isDrill {
+            drillJudge?.flipperPressed(side, bladePosition: bladePosition(on: side),
+                                       at: sceneTime)
+        }
         audio?.play(.flipper)
         haptics?.tap(.light)
     }
@@ -278,6 +293,7 @@ final class PinballScene: SKScene {
         for flipper in parts.flippers where flipper.side == side {
             flipper.release()
         }
+        drillJudge?.flipperReleased(side, at: sceneTime)
     }
 
     /// True when the one ball on the table is sitting still in the shooter
@@ -339,15 +355,19 @@ final class PinballScene: SKScene {
         previousFrameTime = nil
         model?.setDisplayPaused(paused)
         isPaused = paused
-        physicsWorld.speed = paused ? 0 : 1
+        physicsWorld.speed = paused ? 0 : tableSpeed
     }
 
     // MARK: - Frame loop
 
     override func update(_ currentTime: TimeInterval) {
         guard !isPaused else { previousFrameTime = nil; return }
+        // In slow motion the table's own clock runs slower too, so every
+        // timer — a cradle held, a drill's time limit — is in table time.
         let delta = min(1.0 / 15.0, max(0, currentTime - (previousFrameTime ?? currentTime)))
+            * Double(tableSpeed)
         previousFrameTime = currentTime
+        applyTableSpeed()
         sceneTime += delta
 
         for effect in session.advance(to: sceneTime) {
@@ -355,9 +375,10 @@ final class PinballScene: SKScene {
         }
 
         #if DEBUG
-        if QAFlags.autoplay, session.phase == .playing { autoFlipForQA() }
+        if QAFlags.autoplay, session.phase == .playing { isDrill ? autoDrillForQA() : autoFlipForQA() }
         #endif
         parts.flippers.forEach { $0.drive() }
+        if isDrill { tickDrill() }
 
         let maxSpeed = geometry.length(PhysicsTuning.maxBallSpeed)
         let radius = geometry.length(TableLayout.ballRadius)
@@ -461,6 +482,10 @@ final class PinballScene: SKScene {
     // MARK: - Rules bridge
 
     func dispatch(_ event: TableEvent) {
+        if isDrill {
+            drillEvent(event)
+            return
+        }
         #if DEBUG
         tallyForQA(event)
         #endif
@@ -470,6 +495,8 @@ final class PinballScene: SKScene {
     }
 
     func handle(_ effect: GameEffect) {
+        // A drill keeps no score and runs no modes.
+        guard !isDrill else { return }
         // The game-over screen waits until the display has counted the last
         // ball's bonus, rather than covering it up.
         if case .gameOver = effect, bonusCountdown > 0 {

@@ -12,6 +12,7 @@ struct HowToPlayView: View {
         ("combos", "flame.fill"),
         ("missions", "target"),
         ("save", "shield.fill"),
+        ("academy", "graduationcap.fill"),
     ]
 
     var body: some View {

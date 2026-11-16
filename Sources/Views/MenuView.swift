@@ -3,6 +3,7 @@ import SwiftUI
 struct MenuView: View {
 
     let onPlay: () -> Void
+    let onAcademy: () -> Void
     let onOpen: (Panel) -> Void
 
     @Environment(AppSettings.self) private var settings
@@ -34,6 +35,11 @@ struct MenuView: View {
                                systemImage: "play.fill",
                                kind: .primary,
                                action: onPlay)
+
+                    NeonButton(title: settings.t("menu.academy"),
+                               systemImage: "graduationcap.fill",
+                               kind: .secondary,
+                               action: onAcademy)
 
                     HStack(spacing: 12) {
                         NeonButton(title: settings.t("menu.highScores"),

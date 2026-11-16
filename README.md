@@ -16,6 +16,7 @@
 
 ## ✨ Features
 
+- ✅ **Flipper Academy**: six drills for the skills real players learn (cradle, dead-flipper catch, tap pass, ramp, drop-target and jackpot-target shots), judged on the real table, with the reason for every miss, catch timing in milliseconds, a blade guide that charts where along the flipper you flipped, slow motion and bronze/silver/gold mastery
 - ✅ A full 90s playfield — three pop bumpers, two slingshots, a five-target drop bank, four standup targets, two ramps, two orbits, a spinner, two saucers, a magnet and the P-I-N-B rollover lanes
 - ✅ Two flippers on real pin joints, as on the classic 90s tables, a pull-and-release plunger, and a nudge that tilts the table if you push your luck three times in two seconds
 - ✅ Six chained missions — Warm-Up, Ramp Rush, Target Frenzy, Orbit Loop, Lock 3 and Jackpot Hunt — leading into the Final Shot wizard mode, tracked on a lit mission ladder under the top arch; beating it relights the ladder for another round
@@ -70,10 +71,11 @@ Pick the `iVidiPinball-iOS` or `iVidiPinball-macOS` scheme and run (`⌘R`).
 2. Drag down anywhere and release to pull the plunger — the further you pull, the harder the ball is launched
 3. Tap the left or right half of the screen for that flipper
 4. Flick a finger sideways while holding a flipper to nudge the table. Three nudges in two seconds cause a **TILT** and cost you the ball
-5. Shoot a saucer to start a mission. Finish all six to unlock **Final Shot**, and clear **Lock 3** to start multiball
-6. Chain ramps and orbits within four seconds to build the combo up to 8×, and complete the **P-I-N-B** lanes to raise the player multiplier up to 5×
-7. On the Mac: `←` / `→` flippers, `Space` hold and release to launch, `N` / `M` nudge, `Esc` pause
-8. Switch language, appearance, sound and controls any time from **Settings**
+5. Open the **Flipper Academy** from the menu to practise one skill at a time: ten attempts per drill, with a coaching line after each one
+6. Shoot a saucer to start a mission. Finish all six to unlock **Final Shot**, and clear **Lock 3** to start multiball
+7. Chain ramps and orbits within four seconds to build the combo up to 8×, and complete the **P-I-N-B** lanes to raise the player multiplier up to 5×
+8. On the Mac: `←` / `→` flippers, `Space` hold and release to launch, `N` / `M` nudge, `Esc` pause
+9. Switch language, appearance, sound and controls any time from **Settings**
 
 ## 🧪 Testing
 

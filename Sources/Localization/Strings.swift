@@ -11,7 +11,8 @@ enum Strings {
 
     static let all: [String: Pair] = {
         var table: [String: Pair] = [:]
-        for group in [common, menu, hud, missions, settings, gameOver, highScores, howTo, about, a11y] {
+        for group in [common, menu, hud, missions, settings, gameOver, highScores, howTo, about, a11y,
+                      academy, drills] {
             table.merge(group) { _, new in new }
         }
         return table
@@ -29,6 +30,9 @@ enum Strings {
         "menu.howToPlay": ("Como jogar", "How to Play"),
         "menu.settings": ("Definições", "Settings"),
         "menu.about": ("Sobre", "About"),
+        "menu.academy": ("Academia de Flippers", "Flipper Academy"),
+        "menu.academySubtitle": ("Aprende as técnicas dos jogadores a sério",
+                                 "Learn the skills real players use"),
     ]
 
     static let hud: [String: Pair] = [
@@ -157,6 +161,10 @@ enum Strings {
         "howto.save.body": (
             "Os primeiros 8 segundos de cada bola estão protegidos: a luz SHOOT AGAIN pisca entre os flippers. Se drenares nesse tempo, a bola volta. No fim de cada bola, o visor conta o bónus dos alvos e das voltas, vezes o multiplicador.",
             "The first 8 seconds of every ball are covered: the SHOOT AGAIN light flashes between the flippers. Drain in that window and the ball comes back. At the end of every ball the display counts out the bonus for targets and loops, times your multiplier."),
+        "howto.academy.title": ("Academia de Flippers", "Flipper Academy"),
+        "howto.academy.body": (
+            "No menu, a Academia ensina as técnicas dos jogadores a sério na mesma mesa: cradle, apanhada, passe com toque e tiros apontados. Cada exercício tem 10 tentativas, diz-te porque falhaste, mostra o momento em milissegundos ou o ponto do flipper onde flipaste, e tem câmara lenta para aprenderes o gesto.",
+            "From the menu, the Academy teaches the skills real players use, on the same table: cradle, dead-flipper catch, tap pass and aimed shots. Each drill gives you 10 attempts, tells you why you missed, shows your timing in milliseconds or the spot on the flipper you flipped from, and has slow motion for learning the move."),
         "howto.scoring.title": ("Pontuação", "Scoring"),
         "howto.score.bumper": ("Bumper", "Pop bumper"),
         "howto.score.target": ("Alvo fixo", "Standup target"),
@@ -177,6 +185,169 @@ enum Strings {
         "about.version": ("Versão", "Version"),
         "about.privacy": ("Privacidade", "Privacy"),
         "about.credits": ("Feito em Cascais, Portugal.", "Made in Cascais, Portugal."),
+    ]
+
+    static let academy: [String: Pair] = [
+        "academy.title": ("Academia de Flippers", "Flipper Academy"),
+        "academy.intro": (
+            "O pinball não é sorte. Os jogadores a sério param a bola, passam-na de um flipper para o outro e escolhem onde acertam. Cada exercício treina uma técnica na mesa verdadeira, com 10 tentativas e o motivo de cada falha.",
+            "Pinball is not luck. Real players stop the ball, pass it from one flipper to the other and choose what they hit. Each drill practises one skill on the real table, with 10 attempts and the reason behind every miss."),
+        "academy.stars": ("%d de %d estrelas", "%d of %d stars"),
+        "academy.best": ("Melhor: %d/10", "Best: %d/10"),
+        "academy.notTried": ("Por experimentar", "Not tried yet"),
+        "academy.group.control": ("Controlo da bola", "Ball control"),
+        "academy.group.aim": ("Pontaria", "Aiming"),
+        "academy.back": ("Voltar", "Back"),
+        "academy.start": ("Começar", "Start"),
+        "academy.what": ("O que é", "What it is"),
+        "academy.how": ("Como fazer", "How to do it"),
+        "academy.why": ("Para que serve", "Why it matters"),
+        "academy.attempt": ("Tentativa %d/%d", "Attempt %d/%d"),
+        "academy.successes": ("%d certas", "%d made"),
+        "academy.slowMotion": ("Câmara lenta", "Slow motion"),
+        "academy.side.left": ("Bola para o flipper esquerdo", "Ball to the left flipper"),
+        "academy.side.right": ("Bola para o flipper direito", "Ball to the right flipper"),
+        "academy.timing": ("Carregaste %d ms antes de a bola chegar", "You pressed %d ms before the ball landed"),
+        "academy.timingLate": ("Carregaste %d ms depois de a bola chegar", "You pressed %d ms after the ball landed"),
+        "academy.blade": ("Flipaste com a bola a %d%% do flipper", "You flipped with the ball %d%% along the flipper"),
+        "academy.struck": ("Bateu primeiro: %@", "It hit first: %@"),
+        "academy.struck.ramp": ("a rampa", "the ramp"),
+        "academy.struck.dropTarget": ("os alvos rebatíveis", "the drop targets"),
+        "academy.struck.standup": ("um alvo fixo", "a standup"),
+        "academy.struck.bumper": ("um bumper", "a pop bumper"),
+        "academy.struck.saucer": ("um saucer", "a saucer"),
+        "academy.struck.orbit": ("uma orbit", "an orbit"),
+        "academy.struck.spinner": ("o spinner", "the spinner"),
+        "academy.struck.lane": ("uma pista de cima", "a top lane"),
+        "academy.bladeTitle": ("Onde flipaste", "Where you flipped"),
+        "academy.bladeBase": ("Base", "Base"),
+        "academy.bladeTip": ("Ponta", "Tip"),
+        "academy.sweetSpot": ("Os teus acertos costumam ser entre %d%% e %d%%",
+                              "Your hits usually come between %d%% and %d%%"),
+        "academy.sweetSpotNone": ("Acerta 3 vezes para veres onde fica o teu ponto certo",
+                                  "Make 3 hits to see where your sweet spot is"),
+        "academy.done": ("Exercício terminado", "Drill complete"),
+        "academy.score": ("%d de 10", "%d out of 10"),
+        "academy.newBest": ("NOVO MELHOR", "NEW BEST"),
+        "academy.again": ("Repetir", "Try again"),
+        "academy.toList": ("Academia", "Academy"),
+        "academy.next": ("Próximo exercício", "Next drill"),
+        "academy.mastery.0": ("Continua a treinar: 5 certas dão a primeira estrela.",
+                              "Keep practising: 5 made earns the first star."),
+        "academy.mastery.1": ("Bronze. 7 certas dão a prata.", "Bronze. 7 made earns silver."),
+        "academy.mastery.2": ("Prata. 9 certas dão o ouro.", "Silver. 9 made earns gold."),
+        "academy.mastery.3": ("Ouro. Técnica dominada.", "Gold. Skill mastered."),
+
+        "academy.fb.cradled": ("CRADLE", "CRADLED"),
+        "academy.fb.cradled.tip": ("Bola parada e sob controlo. Agora podes escolher o próximo tiro com calma.",
+                                   "Ball stopped and under control. Now you can line up the next shot calmly."),
+        "academy.fb.caught": ("APANHADA", "CAUGHT"),
+        "academy.fb.caught.tip": ("O flipper levantado absorveu a queda e a bola rolou para a base.",
+                                  "The raised flipper soaked up the fall and the ball rolled to the base."),
+        "academy.fb.passed": ("PASSE", "PASSED"),
+        "academy.fb.passed.tip": ("A bola mudou de flipper sem subir a mesa. É assim que se prepara o tiro do outro lado.",
+                                  "The ball changed flippers without going up the table. That is how you set up a shot from the other side."),
+        "academy.fb.hit": ("ACERTASTE", "HIT"),
+        "academy.fb.hit.tip": ("Lembra-te de onde estava a bola no flipper: é esse o ponto para este tiro.",
+                               "Remember where the ball was on the flipper: that is the spot for this shot."),
+        "academy.fb.noFlip": ("SEM FLIPPER", "NO FLIP"),
+        "academy.fb.noFlip.tip": ("Não levantaste o flipper. Mantém-no levantado antes de a bola chegar.",
+                                  "You never raised the flipper. Hold it up before the ball gets there."),
+        "academy.fb.flippedIntoIt": ("BATESTE NA BOLA", "FLIPPED INTO IT"),
+        "academy.fb.flippedIntoIt.tip": ("O flipper ainda estava a subir quando a bola chegou e atirou-a. Levanta-o mais cedo e não largues.",
+                                         "The flipper was still rising when the ball arrived and batted it away. Raise it earlier and keep holding."),
+        "academy.fb.flippedLate": ("TARDE DEMAIS", "TOO LATE"),
+        "academy.fb.flippedLate.tip": ("A bola ficou, mas porque o flipper a apanhou a subir. Numa apanhada a sério, o flipper já está levantado à espera.",
+                                       "The ball stayed, but only because the rising flipper scooped it. In a real catch the flipper is already up and waiting."),
+        "academy.fb.drained": ("DRENOU", "DRAINED"),
+        "academy.fb.drained.tip": ("A bola passou pelos flippers. Mantém o flipper do lado da bola levantado até ela parar.",
+                                   "The ball got past the flippers. Keep the flipper on the ball's side up until it stops."),
+        "academy.fb.timeout": ("TEMPO", "TIME"),
+        "academy.fb.timeout.tip": ("A bola não chegou a ficar parada. Segura o flipper firme até ela assentar na base.",
+                                   "The ball never settled. Hold the flipper steady until it rests at the base."),
+        "academy.fb.tooHard": ("FORTE DEMAIS", "TOO HARD"),
+        "academy.fb.tooHard.tip": ("A bola subiu a mesa. Baixa o flipper, deixa a bola rolar e dá só um toque curto quando ela chegar à ponta.",
+                                   "The ball went up the table. Drop the flipper, let the ball roll and give it only a short tap as it reaches the tip."),
+        "academy.fb.neverCradled": ("SEM CONTROLO", "NO CONTROL"),
+        "academy.fb.neverCradled.tip": ("Primeiro faz cradle: só se passa uma bola que já está parada.",
+                                        "Cradle it first: you can only pass a ball that is already stopped."),
+        "academy.fb.missed": ("FALHASTE", "MISSED"),
+        "academy.fb.missed.tip": ("Muda o momento: flipar mais cedo ou mais tarde muda o ponto do flipper e, com ele, a direção da bola.",
+                                  "Change your timing: flipping earlier or later changes the spot on the flipper, and with it the ball's direction."),
+    ]
+
+    static let drills: [String: Pair] = [
+        "drill.cradle.name": ("Cradle", "Cradle"),
+        "drill.cradle.skill": ("Parar a bola no flipper", "Stop the ball on a flipper"),
+        "drill.cradle.what": (
+            "Prender a bola entre o flipper levantado e a parede, parada. É a primeira coisa que um jogador a sério aprende: uma bola parada não drena.",
+            "Trapping the ball, stopped, in the crook of a raised flipper. It is the first thing a real player learns: a stopped ball cannot drain."),
+        "drill.cradle.how": (
+            "1. A bola desce pela inlane.\n2. Levanta o flipper desse lado antes de ela chegar.\n3. Não largues: a bola rola para a base e para.\n4. Segura 1 segundo com a bola parada.",
+            "1. The ball rolls down the inlane.\n2. Raise that side's flipper before it arrives.\n3. Keep holding: the ball rolls to the base and stops.\n4. Hold for 1 second with the ball still."),
+        "drill.cradle.why": (
+            "Com a bola parada respiras, vês o que está aceso e escolhes o tiro, em vez de bater em tudo o que aparece.",
+            "With the ball stopped you get a breath, see what is lit and choose a shot, instead of swatting at whatever comes."),
+
+        "drill.deadCatch.name": ("Apanhada", "Dead-Flipper Catch"),
+        "drill.deadCatch.skill": ("Apanhar uma bola que cai", "Catch a falling ball"),
+        "drill.deadCatch.what": (
+            "A bola cai do meio da mesa para cima de um flipper. Com o flipper já levantado, a queda perde força e a bola acaba parada na base.",
+            "The ball drops from the middle of the table on to a flipper. With the flipper already up, the fall loses its energy and the ball ends up resting at the base."),
+        "drill.deadCatch.how": (
+            "1. Vê de que lado vem a bola.\n2. Levanta esse flipper cedo, antes de a bola lhe tocar.\n3. Não flipes quando a bola bate: isso atira-a.\n4. Segura até a bola parar.",
+            "1. Watch which side the ball is coming to.\n2. Raise that flipper early, before the ball touches it.\n3. Do not flip as it lands: that bats it away.\n4. Hold until the ball stops."),
+        "drill.deadCatch.why": (
+            "A maioria das bolas perdidas são bolas que caem do meio e levam um flipper à toa. Apanhá-las transforma o caos em controlo.",
+            "Most lost balls are ones that drop from the middle and get a panicked flip. Catching them turns chaos into control."),
+
+        "drill.tapPass.name": ("Passe com toque", "Tap Pass"),
+        "drill.tapPass.skill": ("Passar a bola para o outro flipper", "Move the ball to the other flipper"),
+        "drill.tapPass.what": (
+            "Levar uma bola parada de um flipper para o outro sem a mandar mesa acima. Muitos tiros só se fazem bem a partir de um dos lados.",
+            "Moving a stopped ball from one flipper to the other without sending it up the table. Many shots can only be made well from one side."),
+        "drill.tapPass.how": (
+            "1. Faz cradle à bola.\n2. Baixa o flipper e deixa-a rolar.\n3. Quando chega à ponta, um toque curtíssimo atira-a para o outro lado.\n4. Levanta o outro flipper e faz cradle lá.",
+            "1. Cradle the ball.\n2. Drop the flipper and let it roll.\n3. As it reaches the tip, a very short tap pops it across.\n4. Raise the other flipper and cradle it there."),
+        "drill.tapPass.why": (
+            "Quem só joga de um lado só tem metade dos tiros. Passar a bola dá-te a mesa inteira.",
+            "A player stuck on one side only has half the shots. Passing gives you the whole table."),
+
+        "drill.rampShot.name": ("Tiro à rampa", "Ramp Shot"),
+        "drill.rampShot.skill": ("Meter a bola numa rampa", "Put the ball up a ramp"),
+        "drill.rampShot.what": (
+            "Fazer subir a bola por uma das rampas. A direção da bola depende do ponto do flipper em que ela está quando carregas.",
+            "Sending the ball up one of the ramps. Where the ball goes depends on where it is on the flipper when you press."),
+        "drill.rampShot.how": (
+            "1. Faz cradle.\n2. Baixa o flipper: a bola rola da base para a ponta.\n3. Flipa no ponto certo do percurso.\n4. Vê no fim onde flipaste e acerta o momento.",
+            "1. Cradle the ball.\n2. Drop the flipper: the ball rolls from the base to the tip.\n3. Flip at the right point of that roll.\n4. Check where you flipped afterwards and adjust."),
+        "drill.rampShot.why": (
+            "As rampas valem combos e missões. Acertar de propósito, e não por acaso, é o que separa um jogador de um batedor.",
+            "Ramps feed combos and missions. Making them on purpose, not by accident, is what separates a player from a flailer."),
+
+        "drill.standupShot.name": ("Alvos do jackpot", "Jackpot Targets"),
+        "drill.standupShot.skill": ("Acertar nos alvos fixos da direita", "Hit the standups on the right"),
+        "drill.standupShot.what": (
+            "Acertar num dos alvos fixos do lado direito da mesa. Na missão Caça ao Jackpot e na multibola são eles que pagam os jackpots.",
+            "Hitting one of the standup targets on the right of the table. In Jackpot Hunt and in multiball they are what pays the jackpots."),
+        "drill.standupShot.how": (
+            "1. Faz cradle.\n2. Baixa o flipper e deixa a bola rolar.\n3. Tiro estreito: costuma sair com a bola ainda perto da base, por isso deixa-a rolar só um pouco antes de flipares.\n4. Usa o guia do flipper para repetir o ponto que resultou.",
+            "1. Cradle the ball.\n2. Drop the flipper and let the ball roll.\n3. A narrow shot: it usually comes with the ball still near the base, so let it roll only a little before you flip.\n4. Use the flipper guide to repeat the spot that worked."),
+        "drill.standupShot.why": (
+            "Um jackpot aceso só vale se lhe acertares. Treinar este tiro com calma é o que o torna possível no meio da multibola.",
+            "A lit jackpot is only worth something if you hit it. Practising this shot calmly is what makes it possible in the middle of multiball."),
+
+        "drill.dropShot.name": ("Alvos rebatíveis", "Drop Targets"),
+        "drill.dropShot.skill": ("Acertar num alvo pequeno", "Hit a small target"),
+        "drill.dropShot.what": (
+            "Derrubar um dos cinco alvos do banco, a partir de um cradle. Conta só se for a primeira coisa em que a bola bate.",
+            "Knocking down one of the five targets in the bank from a cradle. It only counts if it is the first thing the ball strikes."),
+        "drill.dropShot.how": (
+            "1. Faz cradle.\n2. Baixa o flipper: a bola rola da base para a ponta.\n3. Flipa num ponto do percurso e vê o que a bola apanhou primeiro.\n4. Se bateu à esquerda ou à direita do banco, muda o momento, e usa o guia do flipper para repetir o ponto que resultou.",
+            "1. Cradle the ball.\n2. Drop the flipper: the ball rolls from the base to the tip.\n3. Flip at a point on that roll and see what the ball struck first.\n4. If it went left or right of the bank, change your timing, and use the flipper guide to repeat the spot that worked."),
+        "drill.dropShot.why": (
+            "Limpar o banco dá multiplicador e bónus. Saber onde a bola vai bater é o primeiro passo para tiros a sério.",
+            "Clearing the bank raises your multiplier and bonus. Knowing where the ball will hit is the first step to real shooting."),
     ]
 
     static let a11y: [String: Pair] = [

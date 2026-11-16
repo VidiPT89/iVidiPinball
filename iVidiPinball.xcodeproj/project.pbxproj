@@ -20,6 +20,7 @@
 		1F76165C762B8BA4D9923CF2 /* PanelChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7360D50CB98364D1D032F34D /* PanelChrome.swift */; };
 		205A931ED0516CDC47F6F49E /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC5394D11F38647266E43B /* Palette.swift */; };
 		2554DA00D626F3ABCD500132 /* PinballScene+Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CB9D041A410094096F112 /* PinballScene+Effects.swift */; };
+		25CC5145157B1008A9B461E3 /* DrillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AF4F5052B7FF55D5C9EEBE /* DrillModel.swift */; };
 		27E9AD8F621BEF31B7EEB8AF /* MissionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4816E9B83A89C91D59C0D /* MissionEngine.swift */; };
 		2927B6D298B8AF95FFC1E768 /* HowToPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8779D44BD8FF85B09EB4995A /* HowToPlayView.swift */; };
 		2BAF289F3546D41BD789D539 /* iVidiPinballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C8897C2D2936DCC1F65AF /* iVidiPinballApp.swift */; };
@@ -30,6 +31,7 @@
 		3D651951415C08907219C18F /* PlayfieldDecor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097D3DCDABA0630EAFE4827 /* PlayfieldDecor.swift */; };
 		4041FF3B5327701BBAD0BAA4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16617EFE319BE5FCBD36771C /* SplashView.swift */; };
 		448BC25C0A8B18E34A387A3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62E760E0F61E2888A6B6709 /* Assets.xcassets */; };
+		454B49E2C76F05274E8CDB0D /* PinballScene+Academy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD5F359576ECE98ABC7BC /* PinballScene+Academy.swift */; };
 		45FDA2CB3E30206941B658F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62E760E0F61E2888A6B6709 /* Assets.xcassets */; };
 		471F15C7D714C1D5A7056B4D /* Motion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F0CE6DD482146A90D8001 /* Motion.swift */; };
 		4723210F9B7658D9BDD397F6 /* PinballScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D483D929B4ED048D2F268BA5 /* PinballScene.swift */; };
@@ -38,6 +40,7 @@
 		4EABFB8972490E2F7273B171 /* PauseOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45F26075193C6046AFEA40 /* PauseOverlay.swift */; };
 		4F71A55E5610A833DC1E09BF /* TableClearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A61E45018414D4E5F41EA5 /* TableClearanceTests.swift */; };
 		4F7F3EAAC551E1BAA3FBC7F9 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896A88B171B9BE9EC7E0969C /* Links.swift */; };
+		508D28C41443EE5F3B9CA575 /* PinballScene+Academy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899FD5F359576ECE98ABC7BC /* PinballScene+Academy.swift */; };
 		51082AEA40FEFA88EF72A648 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958434D19A6E83E4C8719C0 /* GameSession.swift */; };
 		52FF4F9FB423304E05446630 /* iVidiPinballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C8897C2D2936DCC1F65AF /* iVidiPinballApp.swift */; };
 		549D5FD7BC53C1FA59A7F56F /* GameOverFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1867D8E51AF128F3C70BF4E /* GameOverFlowTests.swift */; };
@@ -52,8 +55,10 @@
 		66B42E52F4E16C9F9D8101E1 /* PinballScene+QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F228501CE8B084089FD25 /* PinballScene+QA.swift */; };
 		688A8C4F45F13241CB990AAA /* PinballScene+Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A931A54BDCE72970110C2CF1 /* PinballScene+Contacts.swift */; };
 		692EA9647304DFE8335323E7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A761376B00B933E42AF38285 /* PrivacyInfo.xcprivacy */; };
+		6DA5D9F8F0E939840094F6F4 /* AcademyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23CCF13C9CE4EF8A2C7C40 /* AcademyView.swift */; };
 		6DD9BF2D7C0E99A27BE32F15 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF2EF62CF9FC2C20340C18 /* GameModel.swift */; };
 		6E6492799E9021494D172E18 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47A1EACA45CE731B8CF255 /* Typography.swift */; };
+		6E9754AEA5266028EB89BDC8 /* Academy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE2F140A41948B4B6A872 /* Academy.swift */; };
 		702E9E84C93C136BB25155A3 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896A88B171B9BE9EC7E0969C /* Links.swift */; };
 		739EAF3ABD6DAEF70490173F /* PhysicsTuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC04D91AC8DB619B81D3C2 /* PhysicsTuning.swift */; };
 		769DA0B2554A7D215D42CC4C /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A241850E4F417A30C17FC30 /* GameOverView.swift */; };
@@ -61,6 +66,7 @@
 		7B58551CC0976CC16674531C /* PinballScene+QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F228501CE8B084089FD25 /* PinballScene+QA.swift */; };
 		7DD96946640494B7D5EA2F27 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5557A92A622496CF13815508 /* Persistence.swift */; };
 		7F3D68F3E6128C8CC1FD5B5D /* TableGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F885410AFADE1E8DFFF70C1 /* TableGeometry.swift */; };
+		8025AFAD0277A95101F98C8C /* AcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD6B6298114AFD01646D124 /* AcademyTests.swift */; };
 		849FA62E25A8EA12A8DD992B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633978E530BAFBB071355FC0 /* HUDView.swift */; };
 		8964AA30C21B29F2A3DAAEF4 /* PlayfieldDecor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097D3DCDABA0630EAFE4827 /* PlayfieldDecor.swift */; };
 		8AEA575BDF89AFB9DCA1EF37 /* FlipperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7923CD055388DD64FC7E62 /* FlipperTests.swift */; };
@@ -74,10 +80,12 @@
 		96811AC30DD6290A0C6E1ABE /* TableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B518064D1407CEC7580DC /* TableBuilder.swift */; };
 		96C2FD13ABE6C493C2B73DE2 /* TableNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3745894C26C741E6FF1D6C /* TableNodes.swift */; };
 		995119EE7D134B1A5F16D04B /* PhysicsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F901F933A52C55FC4199273 /* PhysicsCategories.swift */; };
+		996F9DE6027BC0DD2245D44F /* Academy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE2F140A41948B4B6A872 /* Academy.swift */; };
 		9A121489755150D0ABE3EA15 /* FlipperNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6B5B162C3A1ED4D8920C8 /* FlipperNode.swift */; };
 		9D4BB631AA9D6F9F4E0A18F5 /* MissionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C4816E9B83A89C91D59C0D /* MissionEngine.swift */; };
 		9D836E5B2C4E7278F4A1A51F /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB12991CCE5FCF0656067EC /* AboutView.swift */; };
 		9D837704B9627FCD33583242 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFB6569172E6665E9C0ABDA /* GameControls.swift */; };
+		A247669E679C49A97A96BF7B /* DrillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B350C0B300E9C78782827 /* DrillView.swift */; };
 		A73CA55A38C16DDED79307B5 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFC5394D11F38647266E43B /* Palette.swift */; };
 		A88222204109FEA0C8B37FD1 /* PhysicsTuning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC04D91AC8DB619B81D3C2 /* PhysicsTuning.swift */; };
 		AA2EC053AB653C31200D08CB /* TableLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC7CD30BC40830FCD9880B /* TableLighting.swift */; };
@@ -91,8 +99,10 @@
 		C4C25F93E682D0772EB90DDD /* DotMatrixDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB36D531A92FFB6E9D068BD6 /* DotMatrixDisplay.swift */; };
 		C632897C4DD1F4143CE5277D /* PinballScene+Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A931A54BDCE72970110C2CF1 /* PinballScene+Contacts.swift */; };
 		CB010E640E5300213688ABFA /* MissionEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8BF21B3270D63E5DDFA017 /* MissionEngineTests.swift */; };
+		CB7A252ED23738BFE81C40A3 /* DrillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AF4F5052B7FF55D5C9EEBE /* DrillModel.swift */; };
 		CE0C5358F6355EFF916B8E11 /* TableSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC6273B5349338FF9A8392 /* TableSnapshotTests.swift */; };
 		CF0C0245C120CF4860B8AEE2 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD819B50F13323445F5B2EA9 /* AudioEngine.swift */; };
+		CFC226605F7B1AFE47253FBA /* DrillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B350C0B300E9C78782827 /* DrillView.swift */; };
 		D2D45FFF42B0F87BF51F6C3D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AF2EF62CF9FC2C20340C18 /* GameModel.swift */; };
 		D673E032C372F8FEF83618B0 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03F3ACB1207DAA21E8C1AFF /* AppSettings.swift */; };
 		D97E6701E12778AB2522881C /* GameModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29712B3E9F10B42A69D2D7A /* GameModels.swift */; };
@@ -101,6 +111,7 @@
 		DB2D8E843ED4213C4F261C95 /* KickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE29F5946A7CE427F340F965 /* KickModel.swift */; };
 		DC26DC7A3266B1A9994F8B9E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DAC5D91398AD7DB4084D2D /* SettingsView.swift */; };
 		DCC613829907383ABC33CADE /* KickModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE29F5946A7CE427F340F965 /* KickModel.swift */; };
+		DEA6E2E92502B5CE4B318EDC /* AcademyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23CCF13C9CE4EF8A2C7C40 /* AcademyView.swift */; };
 		DEECFDB87A6EBF7EABF5B1F4 /* HighScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155E69BBC7E1696D6A27FFC /* HighScoresView.swift */; };
 		E17DDA057159543FF7506677 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0958434D19A6E83E4C8719C0 /* GameSession.swift */; };
 		E2BFC95D079249B6B211DAB2 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633978E530BAFBB071355FC0 /* HUDView.swift */; };
@@ -130,6 +141,7 @@
 
 /* Begin PBXFileReference section */
 		033C2E18F70A474A94E5E8AB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		082B350C0B300E9C78782827 /* DrillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillView.swift; sourceTree = "<group>"; };
 		0958434D19A6E83E4C8719C0 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		0A241850E4F417A30C17FC30 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		16617EFE319BE5FCBD36771C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -141,7 +153,9 @@
 		3F2B3115995A704043ECF50B /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		3F47A1EACA45CE731B8CF255 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		4DAACD4E2D4F9218002B01E1 /* iVidiPinball.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = iVidiPinball.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0DE2F140A41948B4B6A872 /* Academy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Academy.swift; sourceTree = "<group>"; };
 		4E3745894C26C741E6FF1D6C /* TableNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNodes.swift; sourceTree = "<group>"; };
+		51AF4F5052B7FF55D5C9EEBE /* DrillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillModel.swift; sourceTree = "<group>"; };
 		526F228501CE8B084089FD25 /* PinballScene+QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinballScene+QA.swift"; sourceTree = "<group>"; };
 		5557A92A622496CF13815508 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5F885410AFADE1E8DFFF70C1 /* TableGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableGeometry.swift; sourceTree = "<group>"; };
@@ -157,6 +171,7 @@
 		8155E69BBC7E1696D6A27FFC /* HighScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresView.swift; sourceTree = "<group>"; };
 		8779D44BD8FF85B09EB4995A /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 		896A88B171B9BE9EC7E0969C /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		899FD5F359576ECE98ABC7BC /* PinballScene+Academy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinballScene+Academy.swift"; sourceTree = "<group>"; };
 		89DC04D91AC8DB619B81D3C2 /* PhysicsTuning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsTuning.swift; sourceTree = "<group>"; };
 		8C2B0B8B9BADF2240F169475 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		911A998E8DDD8E9455F5429E /* ScoreEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreEngine.swift; sourceTree = "<group>"; };
@@ -164,6 +179,7 @@
 		941F0CE6DD482146A90D8001 /* Motion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Motion.swift; sourceTree = "<group>"; };
 		98A61E45018414D4E5F41EA5 /* TableClearanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableClearanceTests.swift; sourceTree = "<group>"; };
 		9A7B518064D1407CEC7580DC /* TableBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBuilder.swift; sourceTree = "<group>"; };
+		9D23CCF13C9CE4EF8A2C7C40 /* AcademyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyView.swift; sourceTree = "<group>"; };
 		9DD3B748027DE4BF2D823705 /* KickModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickModelTests.swift; sourceTree = "<group>"; };
 		A761376B00B933E42AF38285 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		A931A54BDCE72970110C2CF1 /* PinballScene+Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinballScene+Contacts.swift"; sourceTree = "<group>"; };
@@ -173,6 +189,7 @@
 		AEFC5394D11F38647266E43B /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		B80220509F7F7A40E05A87A0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BA8BF21B3270D63E5DDFA017 /* MissionEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionEngineTests.swift; sourceTree = "<group>"; };
+		BAD6B6298114AFD01646D124 /* AcademyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyTests.swift; sourceTree = "<group>"; };
 		BD7923CD055388DD64FC7E62 /* FlipperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipperTests.swift; sourceTree = "<group>"; };
 		C15B7ED483496D174C2422DF /* iVidiPinballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVidiPinballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFB6569172E6665E9C0ABDA /* GameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
@@ -213,6 +230,7 @@
 				73C6B5B162C3A1ED4D8920C8 /* FlipperNode.swift */,
 				6F901F933A52C55FC4199273 /* PhysicsCategories.swift */,
 				D483D929B4ED048D2F268BA5 /* PinballScene.swift */,
+				899FD5F359576ECE98ABC7BC /* PinballScene+Academy.swift */,
 				A931A54BDCE72970110C2CF1 /* PinballScene+Contacts.swift */,
 				277CB9D041A410094096F112 /* PinballScene+Effects.swift */,
 				526F228501CE8B084089FD25 /* PinballScene+QA.swift */,
@@ -272,6 +290,7 @@
 		9029DFC7C588E3FE43B39681 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4E0DE2F140A41948B4B6A872 /* Academy.swift */,
 				0958434D19A6E83E4C8719C0 /* GameSession.swift */,
 				EE29F5946A7CE427F340F965 /* KickModel.swift */,
 				36C4816E9B83A89C91D59C0D /* MissionEngine.swift */,
@@ -307,6 +326,7 @@
 			children = (
 				D03F3ACB1207DAA21E8C1AFF /* AppSettings.swift */,
 				DD819B50F13323445F5B2EA9 /* AudioEngine.swift */,
+				51AF4F5052B7FF55D5C9EEBE /* DrillModel.swift */,
 				D0AF2EF62CF9FC2C20340C18 /* GameModel.swift */,
 				D7A015394187E1F3B599DBB9 /* HapticsEngine.swift */,
 				EC6C8897C2D2936DCC1F65AF /* iVidiPinballApp.swift */,
@@ -317,6 +337,7 @@
 		FA07D3428F5D2048B6C853AB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				BAD6B6298114AFD01646D124 /* AcademyTests.swift */,
 				FDC132A95A8D1D705AC39988 /* ArcadeRulesTests.swift */,
 				BD7923CD055388DD64FC7E62 /* FlipperTests.swift */,
 				D1867D8E51AF128F3C70BF4E /* GameOverFlowTests.swift */,
@@ -336,7 +357,9 @@
 			isa = PBXGroup;
 			children = (
 				EDB12991CCE5FCF0656067EC /* AboutView.swift */,
+				9D23CCF13C9CE4EF8A2C7C40 /* AcademyView.swift */,
 				AB36D531A92FFB6E9D068BD6 /* DotMatrixDisplay.swift */,
+				082B350C0B300E9C78782827 /* DrillView.swift */,
 				CDFB6569172E6665E9C0ABDA /* GameControls.swift */,
 				0A241850E4F417A30C17FC30 /* GameOverView.swift */,
 				8C2B0B8B9BADF2240F169475 /* GameView.swift */,
@@ -482,11 +505,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D836E5B2C4E7278F4A1A51F /* AboutView.swift in Sources */,
+				996F9DE6027BC0DD2245D44F /* Academy.swift in Sources */,
+				DEA6E2E92502B5CE4B318EDC /* AcademyView.swift in Sources */,
 				EE2886FF6CD4200917493984 /* AppSettings.swift in Sources */,
 				CF0C0245C120CF4860B8AEE2 /* AudioEngine.swift in Sources */,
 				65A00373EB730553BB1BA9AC /* BallNode.swift in Sources */,
 				AFE27918E67DC88C7DD40BF5 /* Components.swift in Sources */,
 				043D9C0A9EDB860CAE145AFF /* DotMatrixDisplay.swift in Sources */,
+				25CC5145157B1008A9B461E3 /* DrillModel.swift in Sources */,
+				CFC226605F7B1AFE47253FBA /* DrillView.swift in Sources */,
 				9A121489755150D0ABE3EA15 /* FlipperNode.swift in Sources */,
 				9D837704B9627FCD33583242 /* GameControls.swift in Sources */,
 				6DD9BF2D7C0E99A27BE32F15 /* GameModel.swift in Sources */,
@@ -509,6 +536,7 @@
 				0BB675DBA988622C6E6F9737 /* Persistence.swift in Sources */,
 				B590AEEEA10B43370E82F84D /* PhysicsCategories.swift in Sources */,
 				A88222204109FEA0C8B37FD1 /* PhysicsTuning.swift in Sources */,
+				454B49E2C76F05274E8CDB0D /* PinballScene+Academy.swift in Sources */,
 				C632897C4DD1F4143CE5277D /* PinballScene+Contacts.swift in Sources */,
 				5C23E63620649F1279058562 /* PinballScene+Effects.swift in Sources */,
 				66B42E52F4E16C9F9D8101E1 /* PinballScene+QA.swift in Sources */,
@@ -536,11 +564,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E154EC26AA6D7382E6BD7C /* AboutView.swift in Sources */,
+				6E9754AEA5266028EB89BDC8 /* Academy.swift in Sources */,
+				6DA5D9F8F0E939840094F6F4 /* AcademyView.swift in Sources */,
 				D673E032C372F8FEF83618B0 /* AppSettings.swift in Sources */,
 				B54F58533CD20F298E9B3540 /* AudioEngine.swift in Sources */,
 				8CDB931023A5BB67E7811E19 /* BallNode.swift in Sources */,
 				0D4BD748543853FC29C26DB2 /* Components.swift in Sources */,
 				C4C25F93E682D0772EB90DDD /* DotMatrixDisplay.swift in Sources */,
+				CB7A252ED23738BFE81C40A3 /* DrillModel.swift in Sources */,
+				A247669E679C49A97A96BF7B /* DrillView.swift in Sources */,
 				0C2ADD0794ECF027425A4379 /* FlipperNode.swift in Sources */,
 				9586A1B43393A93902E4F58D /* GameControls.swift in Sources */,
 				D2D45FFF42B0F87BF51F6C3D /* GameModel.swift in Sources */,
@@ -563,6 +595,7 @@
 				7DD96946640494B7D5EA2F27 /* Persistence.swift in Sources */,
 				995119EE7D134B1A5F16D04B /* PhysicsCategories.swift in Sources */,
 				739EAF3ABD6DAEF70490173F /* PhysicsTuning.swift in Sources */,
+				508D28C41443EE5F3B9CA575 /* PinballScene+Academy.swift in Sources */,
 				688A8C4F45F13241CB990AAA /* PinballScene+Contacts.swift in Sources */,
 				2554DA00D626F3ABCD500132 /* PinballScene+Effects.swift in Sources */,
 				7B58551CC0976CC16674531C /* PinballScene+QA.swift in Sources */,
@@ -589,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8025AFAD0277A95101F98C8C /* AcademyTests.swift in Sources */,
 				E3CBC90E5D5B5A236756CD1A /* ArcadeRulesTests.swift in Sources */,
 				8AEA575BDF89AFB9DCA1EF37 /* FlipperTests.swift in Sources */,
 				549D5FD7BC53C1FA59A7F56F /* GameOverFlowTests.swift in Sources */,
@@ -740,7 +774,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -800,7 +834,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;

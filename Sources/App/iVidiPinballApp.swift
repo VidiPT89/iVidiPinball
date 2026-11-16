@@ -29,6 +29,8 @@ enum Screen: Equatable {
     case splash
     case menu
     case game
+    case academy
+    case drill(DrillID)
 }
 
 enum Panel: String, Identifiable {
@@ -65,12 +67,25 @@ struct RootView: View {
             case .menu:
                 MenuView(
                     onPlay: { advance(to: .game) },
+                    onAcademy: { advance(to: .academy) },
                     onOpen: { panel = $0 })
                     .transition(.opacity.combined(with: .scale(scale: 0.98)))
 
             case .game:
                 GameView(audio: audio, haptics: haptics,
                          onQuit: { advance(to: .menu) })
+                    .transition(.opacity)
+
+            case .academy:
+                AcademyView(onDrill: { advance(to: .drill($0)) },
+                            onBack: { advance(to: .menu) })
+                    .transition(.opacity.combined(with: .scale(scale: 0.98)))
+
+            case .drill(let drill):
+                DrillView(drill: drill, audio: audio, haptics: haptics,
+                          onNext: { advance(to: .drill($0)) },
+                          onBack: { advance(to: .academy) })
+                    .id(drill)
                     .transition(.opacity)
             }
         }
@@ -120,6 +135,8 @@ struct RootView: View {
     /// The title card, unless a debug flag asks for a game or a panel.
     private static var firstScreen: Screen {
         if QAFlags.panel != nil { return .menu }
+        if let drill = QAFlags.drill { return .drill(drill) }
+        if QAFlags.academy { return .academy }
         return QAFlags.startsInGame ? .game : .splash
     }
 

@@ -31,6 +31,10 @@ extension PinballScene: @preconcurrency SKPhysicsContactDelegate {
             passOrbitGate(ball, node: other.node)
         case PhysicsCategory.drain:
             drain(ball)
+        case PhysicsCategory.flipper:
+            if let flipper = other.node as? FlipperNode {
+                drillJudge?.flipperTouched(flipper.side, at: sceneTime)
+            }
         default:
             break
         }
